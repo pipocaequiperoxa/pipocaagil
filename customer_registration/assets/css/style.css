@@ -1,3 +1,29 @@
 body {
-  background-color: linear-gradient(red, yellow);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3D3E44;
+}
+
+#container {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+
+}
+
+.form-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d13e7;
+  padding: 1rem;
+}
+
+.form-image img {
+  width: 980px;
+  height: 980px;
 }
