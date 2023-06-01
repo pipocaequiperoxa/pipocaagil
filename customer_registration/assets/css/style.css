@@ -1,29 +1,27 @@
-body {
+#pginadecad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #3D3E44;
+  max-width: 700px;
+  min-height: 100vh;
+  background-color: #3D3E44;
 }
 
-#container {
-  width: 80%;
-  height: 80vh;
-  display: flex;
-
+#faaseucada {
+  color: #ffffff;
+  font-weight: 400;
 }
 
-.form-image {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #3d13e7;
-  padding: 1rem;
+
+
+
+#ticket {
+ 
+  width: 130px;
 }
 
-.form-image img {
-  width: 980px;
-  height: 980px;
+#ticket img{
+  
+  width: 200px;
 }
