@@ -1,27 +1,87 @@
+main {
+  display: flex;
+}
+
+#menu img{
+  width: 44px;
+  height: 44px; 
+  margin-left: 23px;
+  margin-top: 13px;
+}
+
 #pginadecad {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: 700px;
   min-height: 100vh;
   background-color: #3D3E44;
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 90px;
+  margin-left: 158px;
+}
+
 #faaseucada {
+  margin-top: 45px;
   color: #ffffff;
+  font-family: Inter;
+  font-size: 40px;
   font-weight: 400;
 }
 
+#nomecomple{
+  margin-top: 20px;
+  
+}
+#nomecomple, #email, #datadenasc, #senha, #confirmars span{
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400
+} 
 
+#nomecomple, #email, #datadenasc, #senha, #confirmars{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
 
+.nomecomple, .email, .datadenasc, .senha, .confirmars{
+  width: 375px;
+  height: 44px;
+  border-radius: 2px;
+}
 
-#ticket {
- 
-  width: 130px;
+#fluentWind{
+  width: 200px;
+  height: 32px;
+  background-color:  #ffc831;
+  background-blend-mode: normal;
+}
+
+#fluentwind button {
+  
 }
 
 #ticket img{
-  
-  width: 200px;
+  margin-left: 400px;
+  width: 266px;
+}
+
+#cinemaemca{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #3d13e7;
+}
+
+#cinemaemca img {
+  width: 780px;
+  height: 780px;
 }
