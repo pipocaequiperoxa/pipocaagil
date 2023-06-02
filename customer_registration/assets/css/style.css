@@ -22,7 +22,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 90px;
+  margin-top: 70px;
   margin-left: 158px;
 }
 
@@ -57,20 +57,26 @@ main {
   border-radius: 2px;
 }
 
-#fluentWind{
+#eulieconco{
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400
+}
+
+#fluentWind button{
   width: 200px;
   height: 32px;
   background-color:  #ffc831;
   background-blend-mode: normal;
+  margin-top: 10px;
 }
 
-#fluentwind button {
-  
-}
 
 #ticket img{
   margin-left: 400px;
   width: 266px;
+  
 }
 
 #cinemaemca{
