@@ -1,3 +1,20 @@
 @media(min-width: 700px) {
+  body{
+    width: 100%;
+   
+  }
 
+  #container {
+    margin-left: 130px;
+  }
+
+  #ticket img{
+    margin-left: 330px;
+    margin-top: -66px;
+  }
+  
+  #cinemaemca img {
+    width: 580px;
+    height: 580px;
+  }
 }
