@@ -22,7 +22,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-left: 158px;
 }
 
@@ -69,14 +69,20 @@ main {
   height: 32px;
   background-color:  #ffc831;
   background-blend-mode: normal;
-  margin-top: 10px;
+  margin-top: 36px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  
 }
 
 
 #ticket img{
-  margin-left: 400px;
+  margin-left: 380px;
   width: 266px;
-  
+  margin-top: -46px;
 }
 
 #cinemaemca{
@@ -88,7 +94,6 @@ main {
 }
 
 #cinemaemca img {
-  margin-bottom: 60px;
   width: 780px;
   height: 780px;
 }
