@@ -22,7 +22,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 30px;
   margin-left: 158px;
 }
 
@@ -88,6 +88,7 @@ main {
 }
 
 #cinemaemca img {
+  margin-bottom: 60px;
   width: 780px;
   height: 780px;
 }
