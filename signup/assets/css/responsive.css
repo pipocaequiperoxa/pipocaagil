@@ -1,4 +1,4 @@
-@media(min-width: 700px) {
+@media(min-width: 700px) and (max-width: 1024px) {
   body{
     width: 100%;
    
@@ -16,5 +16,27 @@
   #cinemaemca img {
     width: 580px;
     height: 580px;
+  }
+}
+
+@media (max-width: 414px){
+  #cinemaemca{
+    display: none;
+  }
+
+  #pginadecad {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #3D3E44;
+  }
+
+  #container{
+    margin-left: 20px;
+  }
+
+  #ticket img {
+    display: none;
   }
 }

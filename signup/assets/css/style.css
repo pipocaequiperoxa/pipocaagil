@@ -64,6 +64,10 @@ main {
   font-weight: 400
 }
 
+#checkbox{
+  cursor: pointer;
+}
+
 #fluentWind button{
   width: 200px;
   height: 32px;
