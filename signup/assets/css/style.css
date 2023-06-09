@@ -18,7 +18,7 @@ main {
   background-color: #3D3E44;
 }
 
-#container {
+#form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +32,11 @@ main {
   font-family: Inter;
   font-size: 40px;
   font-weight: 400;
+}
+
+.fa-eye {
+  position: absolute;
+
 }
 
 #nomecomple{
@@ -55,6 +60,8 @@ main {
   width: 375px;
   height: 44px;
   border-radius: 2px;
+  border: 0;
+  outline: none;
 }
 
 #eulieconco{
@@ -79,7 +86,14 @@ main {
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-  
+  border: none;
+  cursor: pointer;
+  transition: all .5s ease-out;
+}
+
+#fluentWind button:hover{
+  background-color:  #dfc274e1;
+  border: none;
 }
 
 #ticket img{
