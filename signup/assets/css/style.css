@@ -43,18 +43,13 @@ main {
   margin-top: 20px;
   
 }
-#nomecomple, #email, #datadenasc, #senha, #confirmars span{
+#nomecomple, #email, #datadenasc, #senha, #confirmars{
+  margin-top: 20px;
   color: #ffffff;
   font-family: Inter;
   font-size: 16px;
   font-weight: 400
 } 
-
-#nomecomple, #email, #datadenasc, #senha, #confirmars{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
 
 .nomecomple, .email, .datadenasc, .senha, .confirmars{
   width: 375px;
@@ -65,6 +60,7 @@ main {
 }
 
 #eulieconco{
+  margin-top: 10px;
   color: #ffffff;
   font-family: Inter;
   font-size: 16px;
