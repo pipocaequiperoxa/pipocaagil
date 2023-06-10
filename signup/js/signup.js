@@ -1,64 +1,45 @@
-const formInput = document.getElementById('form')
-const nomeInput = document.querySelector('.nomecomple')
-const emailInput = document.querySelector('.email')
-const nascimImput = document.querySelector('.datanasc')
-const senhaInput = document.querySelector('.senha')
-const confSenhaInput = document.querySelector('.confirmars')
-const checkInput = document.querySelector('.checkbox')
-const button = document.querySelector('#fluentWind')
+const buttonInput = document.getElementById('button')
 
-button.addEventListener("click", (e) => {
+buttonInput.addEventListener('click', (event) => {
+  event.preventDefault()
 
-  e.preventDefault();
+  const nomeInput = document.querySelector('.nomecomple');
+  const emailInput = document.querySelector('.email');
+  const dataNasciInput = document.querySelector('.datadenasc');
+   let senhaInput = document.querySelector('.senha')
+   const senhaCorreta = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
-  console.log('deu certo')
   
-  //validação do nome
-  if (nomeInput.value === "") {
-    alert("Por favor, preencha o seu nome.")
-    return;
-  } 
-
-  //verificar se o e-mail está preenchido e se é válido
-  if(emailInput.value === "" || !isEmailvalid(emailInput.value)){
-    alert("Por favor, preencha o seu e-mail");
-    return
-  }
-
-  // Vericar se senha esta preenchida
-  if(!validatePassword(senhaInput.value, 8)) {
-    alert("A senha precisa de oito digitos");
-    return;
-  }
-  
-  
-});
-
-//função que valida e-mail
-function isEmailvalid(email) {
-
-  //criar uma regex para válidar e-mail
-  const emailRegex = new RegExp (
-    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
-    );
-
-    if(emailRegex.test(email)) {
-      return true;
-    } else {
-      return false;
-    }
-
-}
-
-
-//Função que valida a senha
-
-function validatePassword (password, minDigitos) {
-  if(password.length >= minDigitos) {
-    //senha válida
-    return true;
+  if(nomeInput.value === ""){
+    nomeInput.classList.add("errorInput")
   } else {
-    //senha inválida
-    return false;
+    nomeInput.classList.remove("errorInput")
   }
-}
+
+  if(emailInput.value === "") {
+    emailInput.classList.add("errorInput")
+  } else {
+    emailInput.classList.remove("errorInput")
+  }
+
+  if(dataNasciInput.value == ""){
+    dataNasciInput.classList.add("errorInput")
+  } else {
+    dataNasciInput.classList.remove("errorInput")
+  }
+
+  if(senhaInput == senhaCorreta ) {
+    
+  }
+
+  if(emailInput.value.indexOf('@') == -1 || emailInput.value.indexOf(".") == -1 || (emailInput.value.indexOf(".") - emailInput.value.indexOf("@") == 1)) {
+  emailInput.classList.add("errorInput")
+  }
+ 
+    
+      
+})
+
+
+
+

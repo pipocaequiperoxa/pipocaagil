@@ -18,7 +18,7 @@
         <img src="signup/assets/img/bot-menu.png" alt="menu">
         </div>
 
-      <div id="form">
+      <form id="form">
                
         <h1 id="faaseucada">FAÇA SEU CADASTRO</h1>
         
@@ -35,11 +35,11 @@
         
 
         <label id="senha">Senha</label>
-        <input class="senha" type="password" name="senha" placeholder="Digite aqui a sua senha..." required>
+        <input class="senha" type="password" name="senha" placeholder="Digite aqui a sua senha..." required onchange="confereSenha()">
         
         
         <label id="confirmars">Confirmar senha</label>
-        <input class="confirmars" type="password" name="confirmars" placeholder="Confirme aqui a sua senha..." required>
+        <input class="confirmars" type="password" name="confirmars" placeholder="Confirme aqui a sua senha..." required onchange="confereSenha()">
         
         <div id="check">
         <label for="confirm" id="eulieconco">Eu li e concordo com os termos de uso</label>
@@ -47,10 +47,10 @@
         </div>
 
         <div id="fluentWind">
-          <button>Finalizar o cadastro</button>
+          <button id="button">Finalizar o cadastro</button>
         </div>
         
-      </div>
+      </form>
         
         <div id="ticket">
           <img src="signup/assets/img/ibson-pag-cadastro.png" alt="Imagem do Ibson apontando">

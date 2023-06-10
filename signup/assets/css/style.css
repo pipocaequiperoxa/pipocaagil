@@ -105,3 +105,8 @@ main {
   width: 780px;
   height: 780px;
 }
+
+.errorInput {
+  border: 2px solid rgb(207, 53, 53) !important;
+  
+}
