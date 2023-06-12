@@ -38,7 +38,7 @@ main {
   margin-top: 20px;
   
 }
-#nomecomple, #email, #datadenasc, #senha, #confirmars{
+#name, #email, #date, #password, #password_2{
   margin-top: 20px;
   color: #ffffff;
   font-family: Inter;
@@ -46,7 +46,7 @@ main {
   font-weight: 400
 } 
 
-.nomecomple, .email, .datadenasc, .senha, .confirmars{
+.name, .email, .date, .password, .password_2{
   width: 375px;
   height: 44px;
   border-radius: 2px;
@@ -62,7 +62,7 @@ main {
   font-weight: 400px;
 }
 
-#checkbox{
+.checkbox{
   cursor: pointer;
 }
 
@@ -93,7 +93,7 @@ main {
   margin-top: -46px;
 }
 
-#cinemaemca{
+#cine{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,12 +101,18 @@ main {
   background-color: #3d13e7;
 }
 
-#cinemaemca img {
+#cine img {
   width: 780px;
   height: 780px;
 }
 
 .errorInput {
-  border: 2px solid rgb(207, 53, 53) !important;
+  width: 375px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: red;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400
   
 }

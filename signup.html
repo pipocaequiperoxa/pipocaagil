@@ -18,36 +18,39 @@
         <img src="signup/assets/img/bot-menu.png" alt="menu">
         </div>
 
-      <form id="form">
+      <form id="form" action="pagina de ação" name="form" method="post" >
                
         <h1 id="faaseucada">FAÇA SEU CADASTRO</h1>
         
-        <label id="nomecomple">Nome completo</label>
-        <input class="nomecomple" type="text" name="nomecomple" placeholder="Digite seu nome completo..." required>
-        
+        <label id="name">Nome completo</label>
+        <input class="name" type="text" name="nomecomple" placeholder="Digite seu nome completo..." required>
+        <div class="msg"></div>
 
         <label id="email">E-mail</label>
         <input class="email" type="email" name="email" placeholder="Digite aqui o seu e-mail..." required>
+        <div class="msgEmail"></div>
+
+        <label id="date">Data de nascimento</label>
+        <input class="date" type="date" name="datadenasc" placeholder="Data de nascimento..."  required>
+        <div class="msgDate"></div>
         
 
-        <label id="datadenasc">Data de nascimento</label>
-        <input class="datadenasc" type="date" name="datadenasc" placeholder="Data de nascimento..." required>
+        <label id="password">Senha</label>
+        <input class="password" type="password" name="senha" placeholder="Digite aqui a sua senha..." required>
+        <div class="msgPassword"></div>
         
-
-        <label id="senha">Senha</label>
-        <input class="senha" type="password" name="senha" placeholder="Digite aqui a sua senha..." required onchange="confereSenha()">
-        
-        
-        <label id="confirmars">Confirmar senha</label>
-        <input class="confirmars" type="password" name="confirmars" placeholder="Confirme aqui a sua senha..." required onchange="confereSenha()">
+        <label id="password_2">Confirmar senha</label>
+        <input class="password_2" type="password" name="confirmars" placeholder="Confirme aqui a sua senha..." required>
+        <div class="msgPassword_2"></div>
         
         <div id="check">
-        <label for="confirm" id="eulieconco">Eu li e concordo com os termos de uso</label>
-        <input type="checkbox" value="0" id="checkbox" name="confirm" required>
+        <label for="confirm" id="checkbox">Eu li e concordo com os termos de uso</label>
+        <input type="checkbox" value="0" class="checkbox" name="confirm" required>
         </div>
+        <div class="msgcheck"></div>
 
         <div id="fluentWind">
-          <button id="button">Finalizar o cadastro</button>
+          <button id="button" onclick="submitForm()">Finalizar o cadastro</button>
         </div>
         
       </form>
@@ -58,7 +61,7 @@
        
     </section>
         
-    <section id="cinemaemca">
+    <section id="cine">
       <img src="signup/assets/img/pc-pag-cadastro.png" alt="logo pc">
     </section>
 
