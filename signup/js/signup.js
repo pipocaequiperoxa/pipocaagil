@@ -4,6 +4,7 @@ const dateInput = document.querySelector('.date')
 const password = document.querySelector('.password')
 const password_2 = document.querySelector('.password_2')
 const submit = document.getElementById('button')
+const formInput = document.getElementById('form')
 
 
 // variaveis de validação de erros
@@ -75,12 +76,7 @@ submit.addEventListener ('click', (e) =>{
     errorMessagePassword_2.classList = "";
   }
 
-  function submitForm() {
-    let form = document.getElementById("#form");
-    form.submit();
-}
-
-});
+ });
 
 //Função que valida e-mail
 function isEmailValid(email) {
