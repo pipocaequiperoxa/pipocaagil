@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="signup/assets/css/responsive.css">
   <link rel="stylesheet" href="signup/assets/css/resets.css">
   <link rel="shortcut icon" href="signup/assets/img/favicon.ico" type="image/x-icon">
+ 
   <title>PIPOCA AGIL</title>
 </head>
 <body>
@@ -16,44 +17,43 @@
         <div id="menu">
         <img src="signup/assets/img/bot-menu.png" alt="menu">
         </div>
-      <div id="container">
+
+      <form id="form" action="pagina de ação" name="form" method="post" >
                
         <h1 id="faaseucada">FAÇA SEU CADASTRO</h1>
         
-        <label id="nomecomple">
-          <span>Nome completo</span>
-          <input  type="text" name="nomecomple" placeholder="Digite seu nome completo..." required class="nomecomple">
-        </label>
+        <label id="name">Nome completo</label>
+        <input class="name" type="text" name="nomecomple" placeholder="Digite seu nome completo..." required>
+        <div class="msg"></div>
 
-        <label id="email">
-          <span>E-mail</span>  
-          <input  type="email" name="email" placeholder="Digite aqui o seu e-mail..." required class="email">
-        </label>
+        <label id="email">E-mail</label>
+        <input class="email" type="email" name="email" placeholder="Digite aqui o seu e-mail..." required>
+        <div class="msgEmail"></div>
 
-        <label id="datadenasc">
-          <span>Data de nascimento</span>
-          <input  type="date" name="datadenasc" placeholder="Data de nascimento..." required class="datadenasc">
-        </label>
+        <label id="date">Data de nascimento</label>
+        <input class="date" type="date" name="datadenasc" placeholder="Data de nascimento..."  required>
+        <div class="msgDate"></div>
+        
 
-        <label id="senha">
-          <span>Senha</span>
-          <input  type="password" name="senha" placeholder="Digite aqui a sua senha..." required class="senha">
-        </label>
-
-        <label id="confirmars">
-          <span>Confirmar senha</span>
-          <input  type="password" name="confirmars" placeholder="Confirme aqui a sua senha..." required class="confirmars">
-        </label>
-
-        <div id="eulieconco">
-          <label for="confirm">Eu li e concordo com os termos de uso</label>
-          <input type="radio" id="confimacao" name="confirm">
+        <label id="password">Senha</label>
+        <input class="password" type="password" name="senha" placeholder="Digite aqui a sua senha..." required>
+        <div class="msgPassword"></div>
+        
+        <label id="password_2">Confirmar senha</label>
+        <input class="password_2" type="password" name="confirmars" placeholder="Confirme aqui a sua senha..." required>
+        <div class="msgPassword_2"></div>
+        
+        <div id="check">
+        <label for="confirm" id="checkbox">Eu li e concordo com os termos de uso</label>
+        <input type="checkbox" value="0" class="checkbox" name="confirm" required>
         </div>
+        <div class="msgcheck"></div>
 
         <div id="fluentWind">
-          <button>Finalizar o cadastro</button>
+          <button id="button" onclick="submitForm()">Finalizar o cadastro</button>
         </div>
-      </div>
+        
+      </form>
         
         <div id="ticket">
           <img src="signup/assets/img/ibson-pag-cadastro.png" alt="Imagem do Ibson apontando">
@@ -61,7 +61,7 @@
        
     </section>
         
-    <section id="cinemaemca">
+    <section id="cine">
       <img src="signup/assets/img/pc-pag-cadastro.png" alt="logo pc">
     </section>
 
@@ -69,6 +69,6 @@
   
   
   
-  <script src="customer_registration/js/custom.js"> </script>
+  <script defer src="signup/js/signup.js"> </script>
 </body>
 </html>

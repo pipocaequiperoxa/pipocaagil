@@ -18,7 +18,7 @@ main {
   background-color: #3D3E44;
 }
 
-#container {
+#form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,30 +38,32 @@ main {
   margin-top: 20px;
   
 }
-#nomecomple, #email, #datadenasc, #senha, #confirmars span{
+#name, #email, #date, #password, #password_2{
+  margin-top: 20px;
   color: #ffffff;
   font-family: Inter;
   font-size: 16px;
   font-weight: 400
 } 
 
-#nomecomple, #email, #datadenasc, #senha, #confirmars{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.nomecomple, .email, .datadenasc, .senha, .confirmars{
+.name, .email, .date, .password, .password_2{
   width: 375px;
   height: 44px;
   border-radius: 2px;
+  border: 0;
+  outline: none;
 }
 
-#eulieconco{
+#check{
+  margin-top: 20px;
   color: #ffffff;
   font-family: Inter;
   font-size: 16px;
-  font-weight: 400
+  font-weight: 400px;
+}
+
+.checkbox{
+  cursor: pointer;
 }
 
 #fluentWind button{
@@ -75,7 +77,14 @@ main {
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-  
+  border: none;
+  cursor: pointer;
+  transition: all .5s ease-out;
+}
+
+#fluentWind button:hover{
+  background-color:  #dfc274e1;
+  border: none;
 }
 
 #ticket img{
@@ -84,7 +93,7 @@ main {
   margin-top: -46px;
 }
 
-#cinemaemca{
+#cine{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +101,18 @@ main {
   background-color: #3d13e7;
 }
 
-#cinemaemca img {
+#cine img {
   width: 780px;
   height: 780px;
+}
+
+.errorInput {
+  width: 375px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: red;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400
+  
 }
