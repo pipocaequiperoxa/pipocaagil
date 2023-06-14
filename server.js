@@ -1,42 +1,27 @@
-var http = require('http'),
-    config = require('./config'),
-    fileHandler = require('./filehandler'),
-    parse = require('url').parse,
-    types = config.types,
-    rootFolder = config.rootFolder,
-    defaultIndex = config.defaultIndex,
-    server;
+const http = require("http");
+const express = require("express");
+const app = express();
+const path = require('path');
+const bodyParser = require('body-parser');
 
-module.exports = server = http.createServer();
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
 
-server.on('request', onRequest);
+app.use(express.static(__dirname + '/public'));
 
-function onRequest(req, res) {
-    var filename = req.url,
-        fullPath,
-        extension;
+app.get("/", function(req, res) {
+    res.send("<h1>Servidor rodando com ExpressJS</h1>");
+});
 
-    if (filename === '/') {
-        filename = defaultIndex;
-    }
+app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, '/public/signup.html'));
+});
 
-    if (filename.split('.').length < 2) {
-        filename = filename + '.html'
-        extension = 'html'
-    } else {
-        extension = filename.split('.')[1]
-    }
+http.createServer(app).listen(3000, () => console.log("Servidor rodando local na porta 3000"));
 
-    fullPath = rootFolder + filename;
-    fileHandler(fullPath, function (data) {
-        res.writeHead(200, {
-            'Content-Type': types[extension] || 'text/plain',
-            'Content-Length': data.length
-        });
-        res.end(data);
 
-    }, function (err) {
-        res.writeHead(404);
-        res.end();
-    });
-}
+
