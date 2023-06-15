@@ -26,7 +26,11 @@ const createUser =  async (request, response) => {
         response.json({"Messagem":'Usuário adicionado com sucesso', "email" : email});
 
       } catch (error) {
-        console.log("ERROR", error.code);
+        console.log("ERROR", error);
+        if(error.code == 23505){
+            response.json({"Messagem":'Email já cadastrado.', "email" : email})
+        }
+
       }
 
 
