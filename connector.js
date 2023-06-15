@@ -15,13 +15,15 @@ const pool = new Pool({
 const createUser = (request, response) => {
     const { username, email, password, birthDate } = request.body
 
-    pool.query('INSERT INTO users (username, email, password, birth_date) VALUES ($1, $2, crypt($3, gen_salt("bf")), $4)', [username, email, password, birthDate,], (error, results) => {
+    pool.query(`INSERT INTO users  (email, password, username, birth_date) VALUES ('${email}', crypt(${password}, gen_salt('bf')), ${username}, ${birthDate})`), (error, results) => {
         if (error) {
             console.log(error);
             throw error;
         }
         response.status(201).send(`User added with ID: ${results.insertId}`);
-    })
+    }
 }
 
 module.exports = { createUser};
+
+
