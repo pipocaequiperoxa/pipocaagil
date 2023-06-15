@@ -24,8 +24,8 @@ const createUser =  async (request, response) => {
             console.log(error);
             throw error;
         }
-        response.status(201).send(`User added with ID: ${results.insertId}`);
-        response.JSON(`Usuário ${email} adicionado com sucesso`);
+        // response.status(201).send(`User added with ID: ${results.insertId}`);
+        response.json({"Messagem":'Usuário adicionado com sucesso', "email" : email});
     }
 }
 
