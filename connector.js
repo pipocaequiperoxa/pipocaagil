@@ -19,14 +19,26 @@ const createUser =  async (request, response) => {
         values: [email, password, username, birthDate],
       }
 
-    await pool.query(query), (error, results) => {
-        if (error) {
-            console.log(error);
-            throw error;
-        }
+      try {
+        await pool.query(query);
         // response.status(201).send(`User added with ID: ${results.insertId}`);
+
         response.json({"Messagem":'Usuário adicionado com sucesso', "email" : email});
-    }
+
+      } catch (error) {
+        console.log("ERROR", error);
+      }
+
+
+    // await pool.query(query), (error, results) => {
+       
+    //     if (error) {
+    //         console.log(error);
+    //         throw error;
+    //     }
+    //     // response.status(201).send(`User added with ID: ${results.insertId}`);
+    //     response.json({"Messagem":'Usuário adicionado com sucesso', "email" : email});
+    // }
 }
 
 module.exports = { createUser};
