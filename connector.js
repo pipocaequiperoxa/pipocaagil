@@ -12,10 +12,14 @@ const pool = new Pool({
 });
 
 
-const createUser = (request, response) => {
+const createUser =  async (request, response) => {
     const { username, email, password, birthDate } = request.body
+    const query = {
+        text: 'INSERT INTO users(email, password, username, birth_date) VALUES($1, crypt($2, gen_salt("bf")), $3, $4)',
+        values: [email, password, username, birthDate],
+      }
 
-    pool.query(`INSERT INTO users  (email, password, username, birth_date) VALUES ('${email}', crypt(${password}, gen_salt('bf')), ${username}, ${birthDate})`), (error, results) => {
+    await pool.query(query), (error, results) => {
         if (error) {
             console.log(error);
             throw error;
