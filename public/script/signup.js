@@ -17,7 +17,6 @@ const errorMessageCheck = document.querySelector('.msgcheck')
 
 
 formInput.addEventListener('submit', (e) => {
-  console.log("SUBMIT")
 //   e.preventDefault()
   //validação do nome
   const nameValue = nameInput.value
