@@ -18,12 +18,12 @@
         <img src="/img/bot-menu.png" alt="menu">
         </div>
 
-      <form id="form" action="pagina de ação" name="form" method="post" >
+      <form id="userForm" action="register" method="post" >
                
         <h1 id="faaseucada">FAÇA SEU CADASTRO</h1>
         
         <label id="name">Nome completo</label>
-        <input class="name" type="text" name="nomecomple" placeholder="Digite seu nome completo..." required>
+        <input class="name" type="text" name="username" placeholder="Digite seu nome completo..." required>
         <div class="msg"></div>
 
         <label id="email">E-mail</label>
@@ -31,26 +31,26 @@
         <div class="msgEmail"></div>
 
         <label id="date">Data de nascimento</label>
-        <input class="date" type="date" name="datadenasc" placeholder="Data de nascimento..."  required>
+        <input class="date" type="date" name="birthDate" placeholder="Data de nascimento..."  required>
         <div class="msgDate"></div>
         
 
         <label id="password">Senha</label>
-        <input class="password" type="password" name="senha" placeholder="Digite aqui a sua senha..." required>
+        <input class="password" type="password" name="password" placeholder="Digite aqui a sua senha..." required>
         <div class="msgPassword"></div>
         
         <label id="password_2">Confirmar senha</label>
-        <input class="password_2" type="password" name="confirmars" placeholder="Confirme aqui a sua senha..." required>
+        <input class="password_2" type="password" name="passConfirm" placeholder="Confirme aqui a sua senha..." required>
         <div class="msgPassword_2"></div>
         
         <div id="check">
         <label for="confirm" id="checkbox">Eu li e concordo com os termos de uso</label>
-        <input type="checkbox" value="0" class="checkbox" name="confirm" required>
+        <input type="checkbox" class="checkbox" name="confirm" required>
         </div>
         <div class="msgcheck"></div>
 
         <div id="fluentWind">
-          <button id="button" onclick="submitForm()">Finalizar o cadastro</button>
+          <input type="submit" value="Finalizar o cadastro" />
         </div>
         
       </form>
@@ -69,6 +69,6 @@
   
   
   
-  <script defer src="script/signup.js"> </script>
+  <script src="script/signup.js"> </script>
 </body>
 </html>

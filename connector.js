@@ -17,9 +17,10 @@ const createUser = (request, response) => {
 
     pool.query('INSERT INTO users (username, email, password, birth_date) VALUES ($1, $2, crypt($3, gen_salt("bf")), $4)', [username, email, password, birthDate,], (error, results) => {
         if (error) {
-            throw error
+            console.log(error);
+            throw error;
         }
-        response.status(201).send(`User added with ID: ${results.insertId}`)
+        response.status(201).send(`User added with ID: ${results.insertId}`);
     })
 }
 

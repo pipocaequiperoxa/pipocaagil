@@ -18,7 +18,7 @@ main {
   background-color: #3D3E44;
 }
 
-#form {
+#userForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +66,7 @@ main {
   cursor: pointer;
 }
 
-#fluentWind button{
+#fluentWind input{
   width: 200px;
   height: 32px;
   background-color:  #ffc831;
@@ -82,7 +82,7 @@ main {
   transition: all .5s ease-out;
 }
 
-#fluentWind button:hover{
+#fluentWind input:hover{
   background-color:  #dfc274e1;
   border: none;
 }
