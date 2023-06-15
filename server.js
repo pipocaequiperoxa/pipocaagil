@@ -22,7 +22,7 @@ app.get("/signup", function(req, res) {
     res.sendFile(path.join(__dirname, '/public/signup.html'));
 });
 
-app.post("/register", db.createUser);
+app.post("/signup", db.createUser);
 
 app.get('/teste', function(req, res) {
     res.sendFile(__dirname + '/public/teste.html');

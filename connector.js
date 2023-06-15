@@ -25,6 +25,7 @@ const createUser =  async (request, response) => {
             throw error;
         }
         response.status(201).send(`User added with ID: ${results.insertId}`);
+        response.JSON(`Usuário ${email} adicionado com sucesso`);
     }
 }
 
