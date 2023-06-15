@@ -15,7 +15,7 @@ const pool = new Pool({
 const createUser =  async (request, response) => {
     const { username, email, password, birthDate } = request.body
     const query = {
-        text: 'INSERT INTO users(email, password, username, birth_date) VALUES($1, crypt($2, gen_salt("bf")), $3, $4)',
+        text: `INSERT INTO users(email, password, username, birth_date) VALUES($1, crypt($2, gen_salt('bf')), $3, $4)`,
         values: [email, password, username, birthDate],
       }
 
